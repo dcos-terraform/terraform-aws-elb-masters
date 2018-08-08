@@ -1,9 +1,9 @@
 variable "cluster_name" {
-  description = "Specify the cluster name all resources get named and tagged with"
+  description = "Cluster name all resources get named and tagged with"
 }
 
 variable "tags" {
-  description = "Add special tags to the resources created by this module"
+  description = "Custom tags added to the resources created by this module"
   type        = "map"
   default     = {}
 }
@@ -25,6 +25,6 @@ variable "instances" {
 }
 
 variable "https_acm_cert_arn" {
-  description = "Specify an ACM certifacte to be used."
+  description = "ACM certifacte to be used."
   default     = ""
 }
