@@ -28,3 +28,8 @@ variable "https_acm_cert_arn" {
   description = "ACM certifacte to be used."
   default     = ""
 }
+
+variable "internal" {
+  description = "Internal Facing Scheme for elb"
+  default = ""
+}
