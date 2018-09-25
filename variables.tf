@@ -1,26 +1,26 @@
 variable "cluster_name" {
-  description = "Cluster name all resources get named and tagged with"
+  description = "Name of the DC/OS cluster"
 }
 
 variable "tags" {
-  description = "Custom tags added to the resources created by this module"
+  description = "Add custom tags to all resources"
   type        = "map"
   default     = {}
 }
 
 variable "subnet_ids" {
-  description = "Subnets to spawn the instances in. The module tries to distribute the instances"
+  description = "List of subnet IDs created in this network"
   type        = "list"
 }
 
 variable "security_groups" {
-  description = "Security Group IDs to be uses."
+  description = "Security Group IDs to use"
   type        = "list"
   default     = []
 }
 
 variable "instances" {
-  description = "List of master instance IDs"
+  description = "List of instance IDs"
   type        = "list"
 }
 
@@ -30,6 +30,6 @@ variable "https_acm_cert_arn" {
 }
 
 variable "internal" {
-  description = "Internal Facing Scheme for elb"
+  description = "This ELB is internal only"
   default     = ""
 }
