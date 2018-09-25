@@ -44,7 +44,7 @@ module "masters" {
   }
 
   https_acm_cert_arn = "${var.https_acm_cert_arn}"
-  elb_name_format    = "masters-%s"
+  elb_name_format    = "%s"
 
   instances       = ["${var.instances}"]
   security_groups = ["${var.security_groups}"]
