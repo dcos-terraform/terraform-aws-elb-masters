@@ -27,12 +27,13 @@ module "dcos-elb-masters" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cluster_name | Cluster name all resources get named and tagged with | string | - | yes |
+| cluster_name | Name of the DC/OS cluster | string | - | yes |
 | https_acm_cert_arn | ACM certifacte to be used. | string | `` | no |
-| instances | List of master instance IDs | list | - | yes |
-| security_groups | Security Group IDs to be uses. | list | `<list>` | no |
-| subnet_ids | Subnets to spawn the instances in. The module tries to distribute the instances | list | - | yes |
-| tags | Custom tags added to the resources created by this module | map | `<map>` | no |
+| instances | List of instance IDs | list | - | yes |
+| internal | This ELB is internal only | string | `` | no |
+| security_groups | Security Group IDs to use | list | `<list>` | no |
+| subnet_ids | List of subnet IDs created in this network | list | - | yes |
+| tags | Add custom tags to all resources | map | `<map>` | no |
 
 ## Outputs
 
