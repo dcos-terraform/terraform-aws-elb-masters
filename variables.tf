@@ -4,24 +4,24 @@ variable "cluster_name" {
 
 variable "tags" {
   description = "Add custom tags to all resources"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
 variable "subnet_ids" {
   description = "List of subnet IDs created in this network"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "security_groups" {
   description = "Security Group IDs to use"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
 variable "instances" {
   description = "List of instance IDs"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "https_acm_cert_arn" {
@@ -33,3 +33,4 @@ variable "internal" {
   description = "This ELB is internal only"
   default     = ""
 }
+
