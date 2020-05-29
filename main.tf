@@ -30,6 +30,7 @@ provider "aws" {
 
 module "masters" {
   source = "dcos-terraform/elb/aws"
+  version = "~> 0.3.0"
 
   providers = {
     aws = aws
